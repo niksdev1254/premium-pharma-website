@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Critical CSS - Inline for fastest loading */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Optimized Animation Keyframes - Minimal and Fast */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translate3d(0, 10px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes slideRight {
+  0% { opacity: 0; transform: translate3d(-10px, 0, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes slideLeft {
+  0% { opacity: 0; transform: translate3d(10px, 0, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* Optimized Classes - Hardware Accelerated */
+.animate-fade-in {
+  animation: fadeIn 0.15s ease-out;
+  will-change: opacity;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.2s ease-out;
+  will-change: transform, opacity;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.2s ease-out;
+  will-change: transform, opacity;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.2s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Performance Optimizations */
+.hover-lift {
+  transition: transform 0.1s ease;
+  will-change: transform;
+}
+
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* Security Styles */
+.secure-input {
+  position: relative;
+  overflow: hidden;
+}
+
+.secure-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+  transition: left 0.15s;
+}
+
+.secure-input:focus-within::before {
+  left: 100%;
+}
+
+/* Gradient Text */
+.gradient-text-pharma {
+  background: linear-gradient(135deg, #2563eb 0%, #10b981 50%, #16a34a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Fast Loading Utilities */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Content Security */
+.secure-content {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Critical path optimization */
+.critical-resource {
+  font-display: swap;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

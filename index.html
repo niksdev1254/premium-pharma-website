@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Critical CSS - Inline for fastest loading -->
+    <style>
+      /* Critical path CSS */
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0;padding:0}
+      .loading{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f8fafc}
+      .spinner{width:40px;height:40px;border:4px solid #e2e8f0;border-top:4px solid #2563eb;border-radius:50%;animation:spin 1s linear infinite}
+      @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    </style>
+    
+    <!-- SEO Meta Tags -->
+    <title>Premium Pharma Wholesale - Trusted Pharmaceutical Distributor | FDA Licensed</title>
+    <meta name="description" content="Premium Pharma Wholesale - Your trusted FDA-licensed pharmaceutical distributor. Bulk medicine, medical supplies, nationwide delivery. Serving 1200+ pharmacies with 99.9% accuracy." />
+    <meta name="keywords" content="wholesale pharmacy, pharmaceutical distributor, bulk medicine, medical supplies, FDA licensed, ISO certified, pharmacy wholesale, healthcare distributor, prescription drugs, medical equipment" />
+    <meta name="author" content="Premium Pharma Wholesale Solutions" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://premiumpharmawholesale.com" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Premium Pharma Wholesale - Trusted Pharmaceutical Distributor" />
+    <meta property="og:description" content="FDA-licensed wholesale pharmacy distributor offering premium pharmaceutical products, medical equipment, and healthcare solutions to pharmacies nationwide." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://premiumpharmawholesale.com" />
+    <meta property="og:image" content="https://premiumpharmawholesale.com/favicon.png" />
+    <meta property="og:site_name" content="Premium Pharma Wholesale" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Premium Pharma Wholesale - Trusted Pharmaceutical Distributor" />
+    <meta name="twitter:description" content="FDA-licensed wholesale pharmacy distributor serving 1200+ pharmacies nationwide with 99.9% order accuracy." />
+    <meta name="twitter:image" content="https://premiumpharmawholesale.com/favicon.png" />
+    
+    <!-- Business Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Premium Pharma Wholesale Solutions",
+      "description": "FDA-licensed pharmaceutical wholesale distributor",
+      "url": "https://premiumpharmawholesale.com",
+      "logo": "https://premiumpharmawholesale.com/favicon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+9188248-01254",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Pharma District",
+        "addressLocality": "Medical City",
+        "addressRegion": "MC",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/premium-pharma-wholesale",
+        "https://twitter.com/premiumpharmawholesale"
+      ]
+    }
+    </script>
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="msapplication-TileImage" content="/favicon.png">
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading fallback -->
+      <div class="loading">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
